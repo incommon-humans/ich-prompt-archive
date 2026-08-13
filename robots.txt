@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prompts.incommonhumans.com/sitemap.xml
