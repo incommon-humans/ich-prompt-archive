@@ -63,11 +63,50 @@
       "mainEntity": {
         "@type": "ItemList",
         "itemListOrder": "https://schema.org/ItemListOrderDescending",
-        "numberOfItems": 2,
+        "numberOfItems": 4,
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
+            "item": {
+              "@type": "HowTo",
+              "@id": "https://prompts.incommonhumans.com/#ai-improve-my-prompt",
+              "name": "The Prompt Doctor",
+              "description": "An AI prompt that diagnoses why another prompt is producing weak output, asks for the missing context, and returns a rewritten version with an explanation of what was added and cut.",
+              "datePublished": "2026-08-19",
+              "inLanguage": "en-GB",
+              "author": { "@id": "https://incommonhumans.com/#jayson" },
+              "totalTime": "PT3M",
+              "step": [
+                { "@type": "HowToStep", "position": 1, "name": "Paste both", "text": "Paste the diagnostic, then the prompt that is not working underneath." },
+                { "@type": "HowToStep", "position": 2, "name": "Read the diagnosis", "text": "It names which of goal, context, audience, format or constraints is missing." },
+                { "@type": "HowToStep", "position": 3, "name": "Answer its questions", "text": "It asks one at a time for the information the prompt lacked." },
+                { "@type": "HowToStep", "position": 4, "name": "Take the rewrite", "text": "You get the improved prompt plus what changed and what to watch for." }
+              ]
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "HowTo",
+              "@id": "https://prompts.incommonhumans.com/#ai-turn-process-into-steps",
+              "name": "The Handover",
+              "description": "An AI prompt that turns an undocumented job into a numbered walkthrough someone else can follow, including the steps an expert would skip.",
+              "datePublished": "2026-08-18",
+              "inLanguage": "en-GB",
+              "author": { "@id": "https://incommonhumans.com/#jayson" },
+              "totalTime": "PT5M",
+              "step": [
+                { "@type": "HowToStep", "position": 1, "name": "Paste the prompt", "text": "Paste it into ChatGPT or Claude on its own." },
+                { "@type": "HowToStep", "position": 2, "name": "Answer six questions", "text": "It asks one at a time about the job, the reader, and what goes wrong." },
+                { "@type": "HowToStep", "position": 3, "name": "Review the assumptions", "text": "Check what it had to assume and answer the questions it could not resolve." }
+              ]
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
             "item": {
               "@type": "HowTo",
               "@id": "https://prompts.incommonhumans.com/#ai-stop-assumptions-prompt",
@@ -86,7 +125,7 @@
           },
           {
             "@type": "ListItem",
-            "position": 2,
+            "position": 4,
             "item": {
               "@type": "HowTo",
               "@id": "https://prompts.incommonhumans.com/#ai-automatic-meeting-notes",
@@ -423,7 +462,7 @@ footer{background:var(--navy);color:var(--cream);padding:44px 0 40px;margin-top:
     <p class="a3">Every prompt I give away on LinkedIn ends up here, in full, for free. Bookmark this page rather than the post. The link never changes and the document grows.</p>
     <div class="meta a4">
       <div><b>Started</b> 12 August 2026</div>
-      <div><b>Prompts</b> <span id="totalPrompts">2</span></div>
+      <div><b>Prompts</b> <span id="totalPrompts">4</span></div>
       <div><b>Taken by</b> <span id="totalCopies">&mdash;</span> people</div>
       <div><b>Time saved between them</b> <span id="totalHours">&mdash;</span></div>
       <div><b>Written by</b> Jayson Breward</div>
@@ -432,6 +471,178 @@ footer{background:var(--navy);color:var(--cream);padding:44px 0 40px;margin-top:
 </header>
 
 <main class="wrap">
+
+  <article class="entry rv" id="ai-improve-my-prompt">
+    <div class="idx">04</div>
+    <p class="datestamp">Wednesday 19 August 2026</p>
+    <h2>The Prompt Doctor <a class="perma" href="#ai-improve-my-prompt" aria-label="Copy link to this prompt">#</a></h2>
+    <p class="subtitle">Diagnoses why a prompt is giving you beige answers, then rewrites it</p>
+    <p class="standfirst">Paste in a prompt that is not working. It tells you what is actually missing, asks you for it, and gives you back a version that works, with a line on what changed and why. It also strips out the padding most people have been taught to add.</p>
+
+    <p class="mine">The most useful prompt I own, because it improves every other one. I run new prompts through this before they go anywhere near this page.</p>
+
+    <div class="setup rv d1">
+      <h3>How to use it</h3>
+      <p>Paste this, then paste the prompt you are unhappy with <b>underneath, in the same message</b>. If you have the disappointing output too, include that as well. It is the fastest diagnosis it can make.</p>
+      <p>One thing that surprises people: it will usually cut more than it adds. The &ldquo;act as a world-class expert with twenty years of experience&rdquo; opener was written for older models. On current reasoning models it is mostly noise, and it can crowd out the instruction that matters.</p>
+    </div>
+
+    <div class="prompt rv d2">
+      <div class="prompt-bar">
+        <span>Works in ChatGPT, Claude, Gemini, Copilot</span>
+        <div class="bar-actions">
+          <button class="copy" type="button">Copy prompt</button>
+          <button class="expand" type="button" data-target="pw-04" aria-expanded="false"
+                  aria-label="Show the full prompt" title="Show the full prompt">
+            <svg class="chev" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+              <path d="M3 5.2 7 9.2l4-4" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="pre-wrap" id="pw-04"><pre>You diagnose and repair prompts. You are blunt about what is wrong and you cut more than you add.
+
+Underneath this message you will find a prompt that is not working for me, and possibly the disappointing output it gave me. That is what you are diagnosing. Do not rewrite anything yet.
+
+If nothing follows this message, ask me to paste the prompt, then stop. Do not diagnose anything until you have it.
+
+STEP 1. Read it and tell me, in no more than five lines, what is actually wrong. Judge it against these five things, and name only the ones that are genuinely missing:
+
+- Goal. Does it say what a finished, correct answer looks like?
+- Context. Does it give the facts that change the answer, rather than describing the task?
+- Audience. Does it say who the output is for and what they already know?
+- Format. Does it say the shape, length and structure required?
+- Constraints. Does it say what to avoid, what is out of scope, and what to do when information is missing?
+
+Also flag padding. Persona preambles like "act as a world-class expert with twenty years of experience" were written for older models. On current reasoning models they are mostly noise and they push the real instruction further down. Say so if you see it.
+
+STEP 2. Ask me for the missing information. ONE question per reply, opening with "Question n of N" so I know how many are coming. Ask, then stop and wait. Do not guess an answer on my behalf, and do not ask about anything my prompt already covers.
+
+STEP 3. Once I have answered, produce:
+
+THE REWRITE
+The improved prompt in full, ready to copy. Nothing else in this section.
+
+WHAT CHANGED
+Up to six lines. What you added and why. What you cut and why. Be specific about the cuts, they are the part people argue with.
+
+WHAT TO WATCH FOR
+The one way this rewrite is still most likely to disappoint, and the sentence to add if it does.
+
+RULES
+
+Shorter is better where it does not cost precision. If the rewrite is longer than the original, justify it in one line.
+
+Keep my voice and my vocabulary. Do not make it sound like a consultant.
+
+Do not add a persona line unless the task genuinely needs one, for example a specific professional register or a named house style.
+
+If my prompt is already good, say so and stop. Do not invent problems to look useful.
+
+If the task needs information you do not have and I cannot supply, say the prompt cannot be fixed by wording alone and explain what would be needed instead.
+
+Plain professional English. Short sentences. UK spelling.
+
+Do not:
+- write any preamble. Begin at step 1
+- use em dashes
+- rewrite before you have asked your questions
+- pad the rewrite with instructions the model would follow anyway
+- use these words: delve, leverage, robust, seamless, unlock, elevate, supercharge</pre></div>
+      <p class="licence">&copy; Free to use, adapt and share, including at work. All we ask is that you credit us when you share: <b>incommonhumans.com</b></p>
+    </div>
+
+    <p class="howto"><strong>Read the cuts, not the additions.</strong> Almost everyone has been taught to make prompts longer. Most bad prompts are long and vague rather than short and vague, and the padding is what buried the one instruction that mattered.</p>
+  </article>
+
+  <article class="entry rv" id="ai-turn-process-into-steps">
+    <div class="idx">03</div>
+    <p class="datestamp">Tuesday 18 August 2026</p>
+    <h2>The Handover <a class="perma" href="#ai-turn-process-into-steps" aria-label="Copy link to this prompt">#</a></h2>
+    <p class="subtitle">Turns a job only you know how to do into steps someone else can follow</p>
+    <p class="standfirst">You describe how you do something, badly and out of order, the way you would explain it at your desk. It comes back as a numbered walkthrough with the assumed knowledge filled in, the failure points named, and the bits you forgot to mention flagged as questions.</p>
+
+    <p class="mine">Most process docs fail for the same reason: the person writing them already knows the answer, so they skip the step that trips everyone else up. This is built to catch that.</p>
+
+    <div class="setup rv d1">
+      <h3>How to use it</h3>
+      <p>Paste it, then describe the job however it comes out. Rambling is fine. It asks first, so you do not need to organise anything up front.</p>
+      <p>Expect it to ask you at least one question that feels obvious. That question is the one your reader would have got stuck on.</p>
+    </div>
+
+    <div class="prompt rv d2">
+      <div class="prompt-bar">
+        <span>Works in ChatGPT, Claude, Gemini, Copilot</span>
+        <div class="bar-actions">
+          <button class="copy" type="button">Copy prompt</button>
+          <button class="expand" type="button" data-target="pw-03" aria-expanded="false"
+                  aria-label="Show the full prompt" title="Show the full prompt">
+            <svg class="chev" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+              <path d="M3 5.2 7 9.2l4-4" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="pre-wrap" id="pw-03"><pre>You turn undocumented work into instructions someone else can follow. You are good at spotting the step an expert skips because it is obvious to them and invisible to everyone else.
+
+I am going to describe a job I do. Do not write anything yet.
+
+First, interview me. Ask ONE question per reply, in the order below. Open each reply with "Question n of 6", ask that question, then stop and wait. Do not ask question 2 until I have answered question 1. If an answer is incomplete, ask one follow-up headed "Question n of 6, following up", then continue.
+
+1. What is the job, and how often do you do it?
+2. Who will be following these instructions, and what do they already know?
+3. Walk me through how you do it. Do not organise it, just talk.
+4. What goes wrong when someone else tries it?
+5. What tools, files, logins or approvals do they need before they start?
+6. How do they know they have done it right, and who checks?
+
+Do not answer any of these yourself and do not tidy up my answer to question 3 as I give it.
+
+Then produce:
+
+1. BEFORE YOU START
+Everything they need in hand first. Access, tools, files, permissions, and anything that takes time to obtain.
+
+2. THE STEPS
+Numbered. Each step is one action, written as an instruction, starting with a verb. Under each, one short line saying what to expect or why it matters. If a step has a decision in it, split it: state the condition, then each branch.
+
+3. WHERE PEOPLE GO WRONG
+The three most likely failure points from my answer to question 4, each with the step number it belongs to and what to do instead.
+
+4. DONE LOOKS LIKE
+How they check their own work before handing it on.
+
+5. WHAT I HAD TO ASSUME
+Anything you filled in because I did not say it. One line each. Be specific, not general.
+
+6. WHAT I STILL NEED FROM YOU
+The questions you could not resolve. These are usually the steps I know so well I forgot to mention them.
+
+RULES
+
+Use my words for tools, systems and job titles. Do not translate them into generic terms.
+
+Where I skipped a step, do not invent it. Put it in section 6 as a question.
+
+Write for the person in my answer to question 2. If they are new, spell out what an expert would leave implicit. If they are experienced, do not patronise them.
+
+One action per step. If a step contains the word "and", it is probably two steps.
+
+Plain professional English. Short sentences. UK spelling.
+
+Do not:
+- write any preamble. Begin at heading 1
+- use em dashes
+- pad a step with a description of why the process exists
+- use these words: delve, leverage, robust, seamless, streamline, journey, unlock
+- number more than 12 steps without telling me it should be split into two documents</pre></div>
+      <p class="licence">&copy; Free to use, adapt and share, including at work. All we ask is that you credit us when you share: <b>incommonhumans.com</b></p>
+    </div>
+
+    <p class="howto"><strong>Section 6 is the one to read first.</strong> It is the list of things you know so well you forgot to say them, and it is why the version you would have written on your own would not have worked.</p>
+  </article>
 
   <article class="entry rv" id="ai-stop-assumptions-prompt">
     <div class="idx">02</div>
@@ -609,7 +820,7 @@ AVOID
   </article>
 
   <div class="pending rv">
-    <div class="idx">03</div>
+    <div class="idx">05</div>
     <p>Tomorrow. Same page, no need to look for it.</p>
   </div>
 
